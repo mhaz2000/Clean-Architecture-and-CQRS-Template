@@ -4,7 +4,7 @@ using CleanArchAndCQRS.Shared.Abstractions.Domain;
 
 namespace CleanArchAndCQRS.Domain.Events
 {
-    public record PackingListAdded(PackingList PackingList, PackingItem PackingItem) : IDomainEvent;
+    public record PackingItemAdded(PackingList PackingList, PackingItem PackingItem) : IDomainEvent;
 
 
 }

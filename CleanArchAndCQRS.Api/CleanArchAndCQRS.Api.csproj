@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanArchAndCQRS.Infrastructure\CleanArchAndCQRS.Infrastructure.csproj" />
+    <ProjectReference Include="..\CleanArchAndCQRS.Shared\CleanArchAndCQRS.Shared.csproj" />
   </ItemGroup>
 
 </Project>

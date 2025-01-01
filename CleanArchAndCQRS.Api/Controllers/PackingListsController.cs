@@ -3,7 +3,6 @@ using CleanArchAndCQRS.Application.DTO;
 using CleanArchAndCQRS.Application.Queries;
 using CleanArchAndCQRS.Shared.Abstractions.Commands;
 using CleanArchAndCQRS.Shared.Abstractions.Queries;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchAndCQRS.Api.Controllers

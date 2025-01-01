@@ -1,10 +1,11 @@
 ﻿using CleanArchAndCQRS.Application.Exceptions;
 using CleanArchAndCQRS.Domain.Repositories;
+using CleanArchAndCQRS.Shared.Abstractions.Commands;
 using MediatR;
 
 namespace CleanArchAndCQRS.Application.Commands.Handlers
 {
-    public class RemovePackingItemHandler : IRequestHandler<RemovePackingItem>
+    public class RemovePackingItemHandler : ICommandHandler<RemovePackingItem>
     {
         private readonly IPackingListRepository _repository;
 

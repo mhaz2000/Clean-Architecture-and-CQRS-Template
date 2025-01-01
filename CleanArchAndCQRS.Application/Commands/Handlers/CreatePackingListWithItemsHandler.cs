@@ -3,11 +3,12 @@ using CleanArchAndCQRS.Application.Services;
 using CleanArchAndCQRS.Domain.Factories;
 using CleanArchAndCQRS.Domain.Repositories;
 using CleanArchAndCQRS.Domain.ValueObjects;
+using CleanArchAndCQRS.Shared.Abstractions.Commands;
 using MediatR;
 
 namespace CleanArchAndCQRS.Application.Commands.Handlers
 {
-    public class CreatePackingListWithItemsHandler : IRequestHandler<CreatePackingListWithItems>
+    public class CreatePackingListWithItemsHandler : ICommandHandler<CreatePackingListWithItems>
     {
         private readonly IPackingListReadService _readService;
         private readonly IPackingListFactory _factory;

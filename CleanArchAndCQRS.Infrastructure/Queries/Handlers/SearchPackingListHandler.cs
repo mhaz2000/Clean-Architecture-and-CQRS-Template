@@ -2,12 +2,12 @@
 using CleanArchAndCQRS.Application.Queries;
 using CleanArchAndCQRS.Infrastructure.EF.Contexts;
 using CleanArchAndCQRS.Infrastructure.Models;
-using MediatR;
+using CleanArchAndCQRS.Shared.Abstractions.Queries;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchAndCQRS.Infrastructure.Queries.Handlers
 {
-    internal sealed class SearchPackingListHandler : IRequestHandler<SearchPackingLists, IEnumerable<PackingListDto>>
+    internal sealed class SearchPackingListHandler : IQueryHandler<SearchPackingLists, IEnumerable<PackingListDto>>
     {
         private readonly DbSet<PackingListReadModel> _packingList;
 

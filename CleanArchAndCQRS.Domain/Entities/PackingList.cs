@@ -2,11 +2,6 @@
 using CleanArchAndCQRS.Domain.Exceptions;
 using CleanArchAndCQRS.Domain.ValueObjects;
 using CleanArchAndCQRS.Shared.Abstractions.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchAndCQRS.Domain.Entities
 {
@@ -18,6 +13,11 @@ namespace CleanArchAndCQRS.Domain.Entities
         public Localization _localization;
 
         private readonly LinkedList<PackingItem> _items = new();
+
+        public PackingList()
+        {
+            
+        }
 
         internal PackingList(Guid id, PackingListName name, Localization localization)
         {
@@ -34,7 +34,7 @@ namespace CleanArchAndCQRS.Domain.Entities
                 throw new PackingItemAlreadyExistsException(_name, item.Name);
 
             _items.AddLast(item);
-            AddEvent(new PackingListAdded(this, item));
+            AddEvent(new PackingItemAdded(this, item));
         }
 
         public void AddItems(IEnumerable<PackingItem> items)

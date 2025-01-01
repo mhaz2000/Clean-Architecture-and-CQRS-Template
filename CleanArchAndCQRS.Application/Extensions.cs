@@ -1,6 +1,7 @@
 ﻿using CleanArchAndCQRS.Domain.Factories;
 using CleanArchAndCQRS.Domain.Policies;
 using CleanArchAndCQRS.Shared;
+using CleanArchAndCQRS.Shared.Abstractions.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanArchAndCQRS.Application
@@ -18,6 +19,8 @@ namespace CleanArchAndCQRS.Application
                 .WithSingletonLifetime());
 
             services.AddShared();
+
+
             return services;
         }
     }
